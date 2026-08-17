@@ -1,0 +1,96 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Usuario {
+  id        String   @id @default(uuid())
+  nome      String
+  email     String   @unique
+  senhaHash String
+  xp        Int      @default(0)
+  nivel     Int      @default(1)
+  streak    Int      @default(0)
+  criadoEm  DateTime @default(now())
+
+  tarefas    Tarefa[]
+  sessoes    SessaoFoco[]
+  inventario ItemInventario[]
+}
+
+model Administrador {
+  id        String @id @default(uuid())
+  nome      String
+  email     String @unique
+  senhaHash String
+
+  missoes     Missao[]
+  recompensas Recompensa[]
+}
+
+model Tarefa {
+  id        String   @id @default(uuid())
+  titulo    String
+  status    String   @default("pendente")
+  usuarioId String
+  usuario   Usuario  @relation(fields: [usuarioId], references: [id])
+
+  sessoes SessaoFoco[]
+}
+
+model Missao {
+  id           String   @id @default(uuid())
+  nome         String
+  dificuldade  String   // Fácil | Médio | Difícil | Chefe
+  duracaoMin   Int
+  duracaoMax   Int
+  administradorId String
+  administrador   Administrador @relation(fields: [administradorId], references: [id])
+
+  sessoes     SessaoFoco[]
+  recompensas Recompensa[]
+}
+
+model Recompensa {
+  id              String  @id @default(uuid())
+  nome            String
+  raridade        String
+  missaoId        String?
+  missao          Missao? @relation(fields: [missaoId], references: [id])
+  administradorId String
+  administrador   Administrador @relation(fields: [administradorId], references: [id])
+
+  itens ItemInventario[]
+}
+
+model SessaoFoco {
+  id           String   @id @default(uuid())
+  duracaoMin   Int
+  estado       String   @default("em_andamento") // em_andamento | concluida | interrompida
+  xpGerado     Int      @default(0)
+  iniciadaEm   DateTime @default(now())
+  finalizadaEm DateTime?
+
+  usuarioId String
+  usuario   Usuario @relation(fields: [usuarioId], references: [id])
+
+  tarefaId String?
+  tarefa   Tarefa? @relation(fields: [tarefaId], references: [id])
+
+  missaoId String?
+  missao   Missao? @relation(fields: [missaoId], references: [id])
+}
+
+model ItemInventario {
+  usuarioId    String
+  usuario      Usuario    @relation(fields: [usuarioId], references: [id])
+  recompensaId String
+  recompensa   Recompensa @relation(fields: [recompensaId], references: [id])
+  obtidoEm     DateTime   @default(now())
+
+  @@id([usuarioId, recompensaId])
+}
