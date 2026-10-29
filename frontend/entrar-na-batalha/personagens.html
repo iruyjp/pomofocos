@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Entrar na Batalha - Escolha seu Personagem</title>
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/personagens.css" />
+</head>
+<body>
+
+  <main class="tela-celular">
+
+    <header class="cabecalho-app">
+      <div class="logo-app">⚔️</div>
+      <button type="button" class="botao-tema" aria-label="Alternar tema claro e escuro">🌙</button>
+    </header>
+
+    <div class="introducao-tela">
+      <h1 class="titulo-tela">ESCOLHA SEU PERSONAGEM</h1>
+      <p class="subtitulo-tela">
+        Cada personagem tem um estilo próprio<br />
+        de encarar a batalha contra a distração
+      </p>
+    </div>
+
+    <!-- Lista de personagens disponíveis -->
+     <div class="cartaoimg">
+     <ul class="lista-cartoes">
+
+      <li class="item-personagem selecionado" data-bloqueado="false">
+        <div class="avatar-personagem"> <img src="img/avatar-img.png" alt="avatar-deusa-suprema"></div>
+        <div class="dados-personagem">
+          <span class="nome-personagem"></span>
+          <span class="status-personagem status-selecionado">selecionado</span>
+          <p class="descricao-personagem">Foco tranquilo, sessões longas e constantes</p>
+        </div>
+        <div class="marcador-selecao">✓</div>
+      </li>
+
+      <li class="item-personagem" data-bloqueado="false">
+        <div  class="avatar-personagem">  <img id="imgdeusasuprema"  src="img/avatar-img (5).png" alt="avatar-deusa-anemo"></div>
+        <div class="dados-personagem">
+          <span class="nome-personagem">Ninja</span>
+          <span class="status-personagem status-selecionado">disponível</span>
+          <p class="descricao-personagem">Sessões curtas e rápidas, direto ao ponto</p>
+        </div>
+        <div class="marcador-selecao"></div>
+      </li>
+
+      <li class="item-personagem" data-bloqueado="false">
+        <div class="avatar-personagem"><img src="img/avatar-img (3).png" alt=""></div>
+        <div class="dados-personagem">
+          <span class="nome-personagem">Robô</span>
+          <span class="status-personagem status-selecionado">disponível</span>
+          <p class="descricao-personagem">Rotina fixa, sem distrações, sem exceções</p>
+        </div>
+        <div class="marcador-selecao"></div>
+      </li>
+
+      <li class="item-personagem" data-bloqueado="true">
+        <div class="avatar-personagem"> <img src="img/avatar-img (2).png" alt=""></div>
+        <div class="dados-personagem">
+          <span class="nome-personagem">Dragão</span>
+          <span class="status-personagem status-bloqueado">bloqueado</span>
+          <p class="descricao-personagem">Desbloqueia no nível 10</p>
+        </div>
+        <div class="marcador-selecao">🔒</div>
+      </li>
+
+      <li class="item-personagem" data-bloqueado="true">
+        <div class="avatar-personagem"> <img src="img/avatar-img (4).png" alt=""></div>
+        <div class="dados-personagem">
+          <span class="nome-personagem">Guardião</span>
+          <span class="status-personagem status-bloqueado">bloqueado</span>
+          <p class="descricao-personagem">Desbloqueia completando 5 missões</p>
+        </div>
+        <div class="marcador-selecao">🔒</div>
+      </li>
+
+    </ul>
+ </div>
+    <div class="area-acao-final">
+      <a href="foco.html" class="botao-principal">Continuar</a>
+    </div>
+
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

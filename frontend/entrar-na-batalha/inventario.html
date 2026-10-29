@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Entrar na Batalha - Inventário</title>
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/inventario.css" />
+</head>
+<body>
+
+  <main class="tela-celular">
+
+    <header class="cabecalho-app">
+      <div class="logo-app">🎒</div>
+      <button type="button" class="botao-tema" aria-label="Alternar tema claro e escuro">🌙</button>
+    </header>
+
+    <div class="introducao-tela">
+      <h1 class="titulo-tela">INVENTÁRIO</h1>
+      <p class="subtitulo-tela">
+        Itens conquistados nas suas sessões<br />
+        de foco e missões concluídas
+      </p>
+    </div>
+
+    <nav class="nav-interna">
+      <a href="foco.html">Foco</a>
+      <a href="missoes.html">Missões</a>
+      <a href="inventario.html" class="aba-ativa">Inventário</a>
+      <a href="progresso.html">Progresso</a>
+    </nav>
+
+    <div class="sub-abas">
+      <button type="button" class="sub-aba-ativa">Todos</button>
+      <button type="button">Ferramentas</button>
+      <button type="button">Equipados</button>
+      <button type="button">Bloqueados</button>
+    </div>
+
+    <!-- Grade de itens do inventário -->
+    <section
+      class="grade-itens"
+      aria-label="Lista de itens do inventário"
+    >
+      <button
+        type="button"
+        class="item-inventario item-selecionado"
+        data-bloqueado="false"
+        data-nome-item="Tesoura da Clareza"
+        data-descricao-item="Corta distrações pela raiz durante 10 minutos após o uso."
+      >✂️</button>
+
+      <button
+        type="button"
+        class="item-inventario"
+        data-bloqueado="false"
+        data-nome-item="Bandeira de Marco"
+        data-descricao-item="Marca um objetivo importante para lembrar durante o dia."
+      >🚩</button>
+
+      <button
+        type="button"
+        class="item-inventario"
+        data-bloqueado="false"
+        data-nome-item="Lápis da Escrita Rápida"
+        data-descricao-item="Ajuda a anotar ideias sem perder o foco da tarefa atual."
+      >✏️</button>
+
+      <button
+        type="button"
+        class="item-inventario"
+        data-bloqueado="false"
+        data-nome-item="Retrato da Motivação"
+        data-descricao-item="Uma imagem para lembrar por que você começou essa jornada."
+      >🖼️</button>
+
+      <button
+        type="button"
+        class="item-inventario"
+        data-bloqueado="false"
+        data-nome-item="Borracha do Recomeço"
+        data-descricao-item="Apaga uma distração e te devolve ao foco em segundos."
+      >🧹</button>
+
+      <button
+        type="button"
+        class="item-inventario item-bloqueado"
+        data-bloqueado="true"
+        data-nome-item="Item bloqueado"
+        data-descricao-item="Complete mais missões para desbloquear este item."
+      >🔒</button>
+
+      <button
+        type="button"
+        class="item-inventario item-bloqueado"
+        data-bloqueado="true"
+        data-nome-item="Item bloqueado"
+        data-descricao-item="Complete mais missões para desbloquear este item."
+      >🔒</button>
+
+      <button
+        type="button"
+        class="item-inventario item-bloqueado"
+        data-bloqueado="true"
+        data-nome-item="Item bloqueado"
+        data-descricao-item="Complete mais missões para desbloquear este item."
+      >🔒</button>
+
+      <button
+        type="button"
+        class="item-inventario item-bloqueado"
+        data-bloqueado="true"
+        data-nome-item="Item bloqueado"
+        data-descricao-item="Complete mais missões para desbloquear este item."
+      >🔒</button>
+    </section>
+
+    <!-- Detalhes do item selecionado na grade acima -->
+    <section class="cartao-item-detalhe">
+      <div class="linha-titulo-item">
+        <span>Tesoura da Clareza</span>
+        <span class="selo-raridade">RARO</span>
+      </div>
+      <p>Corta distrações pela raiz durante 10 minutos após o uso.</p>
+    </section>
+
+    <div class="area-acao-final">
+      <button type="button" class="botao-principal">Equipar item</button>
+    </div>
+
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

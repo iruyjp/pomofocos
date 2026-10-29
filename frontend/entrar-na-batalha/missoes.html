@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Entrar na Batalha - Missões</title>
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/missoes.css" />
+</head>
+<body>
+
+  <main class="tela-celular">
+
+    <header class="cabecalho-app">
+      <div class="logo-app">📜</div>
+      <button type="button" class="botao-tema" aria-label="Alternar tema claro e escuro">🌙</button>
+    </header>
+
+    <div class="introducao-tela">
+      <h1 class="titulo-tela">MISSÕES</h1>
+      <p class="subtitulo-tela">
+        Cumpra suas missões diárias e ganhe<br />
+        experiência para evoluir seu personagem
+      </p>
+    </div>
+
+    <nav class="nav-interna">
+      <a href="foco.html">Foco</a>
+      <a href="missoes.html" class="aba-ativa">Missões</a>
+      <a href="inventario.html">Inventário</a>
+      <a href="progresso.html">Progresso</a>
+    </nav>
+
+    <!-- Sub-abas para filtrar as missões -->
+    <div class="sub-abas">
+      <button type="button" class="sub-aba-ativa">Hoje</button>
+      <button type="button">Semana</button>
+      <button type="button">Concluídas</button>
+    </div>
+
+    <!-- Cartão com a lista de missões do dia -->
+    <section class="cartao-missoes">
+      <div class="cabecalho-cartao-missoes">
+        <span>Missões de hoje</span>
+        <span class="selo-contagem">0/3</span>
+      </div>
+
+      <ul class="lista-cartoes" id="lista-de-missoes">
+
+        <li class="item-missao">
+          <span class="caixa-marcacao">✓</span>
+          <div class="texto-missao">
+            <span class="titulo-missao">Estudar por 25 minutos sem distrações</span>
+            <p class="recompensa-missao">Recompensa: +30 XP</p>
+          </div>
+          <button type="button" class="botao-excluir-missao" aria-label="Excluir esta missão">🗑️</button>
+        </li>
+
+        <li class="item-missao">
+          <span class="caixa-marcacao">✓</span>
+          <div class="texto-missao">
+            <span class="titulo-missao">Completar 2 sessões de foco</span>
+            <p class="recompensa-missao">Recompensa: +50 XP</p>
+          </div>
+          <button type="button" class="botao-excluir-missao" aria-label="Excluir esta missão">🗑️</button>
+        </li>
+
+        <li class="item-missao">
+          <span class="caixa-marcacao">✓</span>
+          <div class="texto-missao">
+            <span class="titulo-missao">Ficar longe do celular por 1 hora</span>
+            <p class="recompensa-missao">Recompensa: +20 XP</p>
+          </div>
+          <button type="button" class="botao-excluir-missao" aria-label="Excluir esta missão">🗑️</button>
+        </li>
+
+      </ul>
+
+      <!-- Formulário para criar uma nova missão -->
+      <form id="formulario-nova-missao" class="formulario-nova-missao">
+        <input
+          type="text"
+          id="campo-nova-missao"
+          placeholder="Digite o nome da nova missão"
+          required
+        />
+        <button type="submit" class="botao-adicionar-missao" aria-label="Adicionar missão">+</button>
+      </form>
+    </section>
+
+    <div class="area-acao-final">
+      <button type="button" class="botao-principal">Confirmar missões</button>
+    </div>
+
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

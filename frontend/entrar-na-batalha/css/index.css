@@ -1,0 +1,50 @@
+/* =====================================================
+   INDEX.CSS
+   Estilo exclusivo da tela de login (index.html).
+   As partes que essa tela também usa, mas que são
+   compartilhadas com outras páginas (moldura do celular,
+   cabeçalho, formulário, botões), ficam em base.css.
+   ===================================================== */
+
+/* Botão redondo de voltar, no lugar do logo nesta tela */
+.botao-voltar {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  border: 2px solid var(--cor-roxo-claro);
+  background: var(--cor-cartao);
+  color: var(--cor-roxo);
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Área com os links "Esqueceu sua senha?" e "Criar conta",
+   que só aparece na tela de login. */
+.rodape-formulario {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.rodape-formulario .link-discreto {
+  font-size: 12px;
+  color: var(--cor-roxo);
+  font-weight: 600;
+}
+
+/* Link "Esqueceu sua senha?" bem apagado, quase invisível,
+   igual à referência de design */
+.rodape-formulario .link-apagado {
+  color: var(--cor-texto-fraco);
+  opacity: 0.5;
+}
+
+.rodape-formulario .texto-sem-conta {
+  font-size: 12px;
+  color: var(--cor-texto-suave);
+  margin-top: -2px;
+}

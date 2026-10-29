@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Entrar na Batalha - Seus Progressos</title>
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/progresso.css" />
+</head>
+<body>
+
+  <main class="tela-celular">
+
+    <header class="cabecalho-app">
+      <div class="logo-app">🏆</div>
+      <button type="button" class="botao-tema" aria-label="Alternar tema claro e escuro">🌙</button>
+    </header>
+
+    <div class="introducao-tela">
+      <h1 class="titulo-tela">SEUS PROGRESSOS</h1>
+      <p class="subtitulo-tela">
+        Acompanhe sua evolução na batalha<br />
+        contra a distração
+      </p>
+    </div>
+
+    <nav class="nav-interna">
+      <a href="foco.html">Foco</a>
+      <a href="missoes.html">Missões</a>
+      <a href="inventario.html">Inventário</a>
+      <a href="progresso.html" class="aba-ativa">Progresso</a>
+    </nav>
+
+    <!-- Cartão com o nome e o título do jogador -->
+    <section class="cartao-perfil">
+      <div class="avatar-perfil">🧙</div>
+      <div class="dados-perfil">
+        <span class="nome-jogador">Maria Sabedoria</span>
+        <div class="titulo-jogador">Maga Sábia · Nível 3</div>
+      </div>
+      <span class="marcador-selecao">🔥</span>
+    </section>
+
+    <!-- Barra de experiência do nível atual -->
+    <section class="cartao-xp">
+      <div class="icone-xp">⭐</div>
+      <div class="info-xp">
+        <div class="linha-nivel">
+          <span>Nível 3</span>
+          <span>420 / 600 XP</span>
+        </div>
+        <div class="barra-progresso">
+          <div class="preenchimento" style="width: 70%;"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Estatísticas gerais do jogador -->
+    <section class="grade-estatisticas">
+      <div class="caixa-estatistica">
+        <div class="valor-estatistica">12</div>
+        <div class="rotulo-estatistica">Dias seguidos</div>
+      </div>
+      <div class="caixa-estatistica">
+        <div class="valor-estatistica">1.860</div>
+        <div class="rotulo-estatistica">XP total</div>
+      </div>
+      <div class="caixa-estatistica">
+        <div class="valor-estatistica">48</div>
+        <div class="rotulo-estatistica">Missões concluídas</div>
+      </div>
+      <div class="caixa-estatistica">
+        <div class="valor-estatistica">32h</div>
+        <div class="rotulo-estatistica">Tempo focado</div>
+      </div>
+    </section>
+
+    <!-- Gráfico simples com o foco da semana -->
+    <section class="cartao-grafico">
+      <div class="titulo-grafico">Atividade da semana</div>
+      <div class="grafico-barras">
+        <div class="barra" style="height: 40%;"><span class="rotulo-dia">S</span></div>
+        <div class="barra" style="height: 65%;"><span class="rotulo-dia">T</span></div>
+        <div class="barra" style="height: 50%;"><span class="rotulo-dia">Q</span></div>
+        <div class="barra" style="height: 80%;"><span class="rotulo-dia">Q</span></div>
+        <div class="barra" style="height: 55%;"><span class="rotulo-dia">S</span></div>
+        <div class="barra" style="height: 90%;"><span class="rotulo-dia">S</span></div>
+        <div class="barra" style="height: 30%;"><span class="rotulo-dia">D</span></div>
+      </div>
+    </section>
+
+    <div class="area-acao-final">
+      <a href="foco.html" class="botao-principal">Novo desafio</a>
+    </div>
+
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

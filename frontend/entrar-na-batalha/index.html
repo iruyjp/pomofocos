@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Entrar na Batalha - Login</title>
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/index.css" />
+</head>
+<body>
+
+  <main class="tela-celular">
+
+    <!-- Cabeçalho com o botão de voltar e o botão de trocar o tema -->
+    <header class="cabecalho-app">
+      <button type="button" class="botao-voltar" onclick="history.back()" aria-label="Voltar">←</button>
+      <button type="button" class="botao-tema" aria-label="Alternar tema claro e escuro">🌙</button>
+    </header>
+
+    <!-- Título e explicação rápida da tela -->
+    <div class="introducao-tela">
+      <h1 class="titulo-tela">ENTRAR NA BATALHA</h1>
+      <p class="subtitulo-tela">
+        Acesse sua jornada e prepare-se<br />
+        para vencer a distração
+      </p>
+    </div>
+
+    <!-- Formulário de login -->
+    <form id="formulario-login" class="cartao-formulario">
+
+      <div class="campo-formulario">
+        <label for="campo-usuario-login">Nome de usuário</label>
+        <div class="caixa-entrada">
+          <span class="icone-campo">👤</span>
+          <input
+            type="text"
+            id="campo-usuario-login"
+            name="usuario"
+            placeholder="Digite seu usuário"
+            required
+          />
+        </div>
+      </div>
+
+      <div class="campo-formulario">
+        <label for="campo-senha-login">Senha</label>
+        <div class="caixa-entrada">
+          <span class="icone-campo">🔒</span>
+          <input
+            type="password"
+            id="campo-senha-login"
+            name="senha"
+            placeholder="Digite sua senha"
+            required
+          />
+        </div>
+      </div>
+
+      <button type="submit" class="botao-principal">ENTRAR</button>
+
+      <div class="rodape-formulario">
+        <a href="#" class="link-discreto link-apagado">Esqueceu sua senha?</a>
+        <p class="texto-sem-conta">Ainda não possui uma conta?</p>
+        <a href="cadastro.html" class="botao-secundario" style="text-align:center;">CRIAR CONTA</a>
+      </div>
+
+    </form>
+
+  </main>
+
+  <script src="js/script.js"></script>
+  <script>
+    // Leva o usuário para a tela de escolha de personagem após o login
+    configurarFormulario("formulario-login", "personagens.html");
+  </script>
+</body>
+</html>

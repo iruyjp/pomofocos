@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Entrar na Batalha - Sessão de Foco</title>
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/foco.css" />
+</head>
+<body>
+
+  <main class="tela-celular">
+
+    <header class="cabecalho-app">
+      <a href="personagens.html" class="link-voltar">‹ Voltar</a>
+      <button type="button" class="botao-tema" aria-label="Alternar tema claro e escuro">🌙</button>
+    </header>
+
+    <!-- Cartão com o nível e a barra de experiência do jogador -->
+    <section class="cartao-xp">
+      <div class="icone-xp">🧙</div>
+      <div class="info-xp">
+        <div class="linha-nivel">
+          <span>Nível 3</span>
+          <span>420 / 600 XP</span>
+        </div>
+        <div class="barra-progresso">
+          <div class="preenchimento" style="width: 70%;"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Navegação entre as telas do jogo -->
+    <nav class="nav-interna">
+      <a href="foco.html" class="aba-ativa">Foco</a>
+      <a href="missoes.html">Missões</a>
+      <a href="inventario.html">Inventário</a>
+      <a href="progresso.html">Progresso</a>
+    </nav>
+
+    <!-- Temporizador de foco -->
+    <section class="cartao-temporizador">
+      <span class="rotulo-temporizador">Sessão de Foco</span>
+
+      <div class="anel-temporizador">
+        <div class="mostrador">25:00</div>
+      </div>
+
+      <div class="controles-temporizador">
+        <button type="button" class="botao-menos-cinco">-5 min</button>
+        <button type="button" class="botao-iniciar-pausar botao-selecionado">▶ Começar</button>
+        <button type="button" class="botao-mais-cinco">+5 min</button>
+      </div>
+
+      <div class="campo-formulario" style="width: 100%;">
+        <label for="campo-missao-foco">Sua missão</label>
+        <textarea
+          id="campo-missao-foco"
+          class="campo-missao-foco"
+          rows="2"
+          placeholder="Descreva sua meta de concentração"
+        ></textarea>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

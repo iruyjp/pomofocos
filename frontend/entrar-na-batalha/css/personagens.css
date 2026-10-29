@@ -1,0 +1,79 @@
+/* =====================================================
+   PERSONAGENS.CSS
+   Estilo exclusivo da tela de escolha de personagem
+   (personagens.html).
+   ===================================================== */
+
+.item-personagem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--cor-cartao);
+  border: 1px solid var(--cor-borda);
+  border-radius: 14px;
+  padding: 12px;
+  box-shadow: var(--sombra-cartao);
+}
+
+.item-personagem.selecionado {
+  border-color: var(--cor-verde);
+}
+
+.avatar-personagem.cartaoimg img  {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: var(--gradiente-botao);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  flex-shrink: 0;
+  
+}
+
+.dados-personagem {
+  flex: 1;
+}
+
+.dados-personagem .nome-personagem {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.dados-personagem .status-personagem {
+  font-size: 11px;
+  margin-left: 6px;
+  font-weight: 600;
+}
+
+.status-personagem.status-selecionado {
+  color: var(--cor-verde);
+}
+
+.status-personagem.status-bloqueado {
+  color: var(--cor-texto-fraco);
+}
+
+.dados-personagem .descricao-personagem {
+  font-size: 12px;
+  color: var(--cor-texto-suave);
+  margin-top: 2px;
+}
+
+/* Quando o personagem está selecionado, o marcador de seleção
+   (definido em base.css) fica verde e com o ícone de "check". */
+.item-personagem.selecionado .marcador-selecao {
+  background: var(--cor-verde);
+  border-color: var(--cor-verde);
+  color: #fff;
+}
+ 
+.cartaoimg img{
+  border-radius: 50%;
+ 
+
+}
+
+
+ 

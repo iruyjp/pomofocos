@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> cadastro</title>
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/cadastro.css" />
+</head>
+<body>
+
+  <main class="tela-celular">
+
+    <header class="cabecalho-app">
+      <div class="logo-app">⚔️</div>
+      <button type="button" class="botao-tema" aria-label="Alternar tema claro e escuro">🌙</button>
+    </header>
+
+    <div class="introducao-tela">
+      <h1 class="titulo-tela">CRIAR SEU PERSONAGEM</h1>
+      <p class="subtitulo-tela">
+        Preencha seus dados para começar<br />
+        sua jornada de foco
+      </p>
+    </div>
+
+    <!-- Formulário de cadastro -->
+    <form id="formulario-cadastro" class="cartao-formulario">
+
+      <div class="campo-formulario">
+        <label for="campo-nome-cadastro">Nome de guerreiro(a)</label>
+        <div class="caixa-entrada">
+          <span class="icone-campo">🛡️</span>
+          <input
+            type="text"
+            id="campo-nome-cadastro"
+            name="nome"
+            placeholder="Como podemos te chamar?"
+            required
+          />
+        </div>
+      </div>
+
+      <div class="campo-formulario">
+        <label for="campo-email-cadastro">E-mail</label>
+        <div class="caixa-entrada">
+          <span class="icone-campo">📧</span>
+          <input
+            type="email"
+            id="campo-email-cadastro"
+            name="email"
+            placeholder="Digite seu e-mail"
+            required
+          />
+        </div>
+      </div>
+
+      <div class="campo-formulario">
+        <label for="campo-senha-cadastro">Senha</label>
+        <div class="caixa-entrada">
+          <span class="icone-campo">🔒</span>
+          <input
+            type="password"
+            id="campo-senha-cadastro"
+            name="senha"
+            placeholder="Crie uma senha"
+            required
+          />
+        </div>
+      </div>
+
+      <div class="campo-formulario">
+        <label for="campo-confirmar-senha-cadastro">Confirme a senha</label>
+        <div class="caixa-entrada">
+          <span class="icone-campo">🔒</span>
+          <input
+            type="password"
+            id="campo-confirmar-senha-cadastro"
+            name="confirmarSenha"
+            placeholder="Digite a senha novamente"
+            required
+          />
+        </div>
+      </div>
+
+      <button type="submit" class="botao-principal">Criar personagem</button>
+
+      <a href="index.html" class="botao-secundario" style="text-align:center;">Cancelar</a>
+
+    </form>
+
+  </main>
+
+  <script src="js/script.js"></script>
+  <script>
+    // Depois do cadastro, o jogador escolhe o personagem
+    configurarFormulario("formulario-cadastro", "personagens.html");
+  </script>
+</body>
+</html>

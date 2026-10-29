@@ -1,0 +1,401 @@
+/* =====================================================
+   BASE.CSS
+   Este arquivo é usado por TODAS as telas do app.
+   Contém: cores do tema, reset básico e os componentes
+   que se repetem em mais de uma página (cabeçalho,
+   moldura do celular, botões, navegação entre abas etc).
+   ===================================================== */
+
+/* -----------------------------------------------------
+   1. CORES DO TEMA (modo claro é o padrão)
+   ----------------------------------------------------- */
+:root {
+  --cor-fundo-pagina: #ecebf7;
+  --cor-fundo-tela: linear-gradient(180deg, #f5f3ff 0%, #ffffff 60%);
+  --cor-cartao: #ffffff;
+  --cor-borda: #e2ddf7;
+  --cor-texto-principal: #201640;
+  --cor-texto-suave: #6b6485;
+  --cor-texto-fraco: #9791b3;
+
+  --cor-roxo-claro: #8b5cf6;
+  --cor-roxo: #7c3aed;
+  --cor-roxo-escuro: #6d28d9;
+  --cor-verde: #10b981;
+  --cor-vermelho: #ef4444;
+  --cor-amarelo: #f59e0b;
+
+  --gradiente-botao: linear-gradient(90deg, var(--cor-roxo) 0%, var(--cor-roxo-claro) 100%);
+  --gradiente-destaque: linear-gradient(90deg, var(--cor-roxo) 0%, var(--cor-verde) 100%);
+
+  --sombra-cartao: 0 4px 14px rgba(76, 29, 149, 0.08);
+  --sombra-botao: 0 6px 16px rgba(124, 58, 237, 0.35);
+
+  --fonte-titulo: "Courier New", Courier, monospace;
+  --fonte-texto: "Segoe UI", Verdana, sans-serif;
+}
+
+/* -----------------------------------------------------
+   2. CORES DO TEMA ESCURO
+   Ativado quando <html data-tema="escuro">
+   ----------------------------------------------------- */
+html[data-tema="escuro"] {
+  --cor-fundo-pagina: #0a0820;
+  --cor-fundo-tela: linear-gradient(180deg, #131030 0%, #0d0b26 100%);
+  --cor-cartao: #171433;
+  --cor-borda: #2c2760;
+  --cor-texto-principal: #f3f1ff;
+  --cor-texto-suave: #b3aed6;
+  --cor-texto-fraco: #736c9c;
+
+  --sombra-cartao: 0 4px 18px rgba(0, 0, 0, 0.45);
+  --sombra-botao: 0 6px 18px rgba(20, 184, 166, 0.35);
+
+  --gradiente-botao: linear-gradient(90deg, var(--cor-roxo) 0%, #14b8a6 100%);
+}
+
+/* -----------------------------------------------------
+   3. RESET BÁSICO
+   ----------------------------------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--fonte-texto);
+  background-color: var(--cor-fundo-pagina);
+  color: var(--cor-texto-principal);
+  display: flex;
+  justify-content: center;
+  padding: 24px 12px;
+  min-height: 100vh;
+  transition: background-color 0.3s ease;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/* -----------------------------------------------------
+   4. MOLDURA DA TELA (simula um celular)
+   Presente em todas as páginas.
+   ----------------------------------------------------- */
+.tela-celular {
+  width: 100%;
+  max-width: 380px;
+  min-height: 780px;
+  background: var(--cor-fundo-tela);
+  border-radius: 28px;
+  border: 1px solid var(--cor-borda);
+  box-shadow: var(--sombra-cartao);
+  padding: 20px 18px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* -----------------------------------------------------
+   5. CABEÇALHO (logo + botão de tema)
+   Presente em todas as páginas.
+   ----------------------------------------------------- */
+.cabecalho-app {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.logo-app {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  border: 2px solid var(--cor-roxo-claro);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  color: var(--cor-roxo);
+  background: var(--cor-cartao);
+}
+
+.botao-tema {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--cor-cartao);
+  border: 1px solid var(--cor-borda);
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* -----------------------------------------------------
+   6. TÍTULOS E TEXTOS DE INTRODUÇÃO
+   Usado em: index, cadastro, personagens, missões,
+   inventário e progresso (não é usado em foco.html).
+   ----------------------------------------------------- */
+.titulo-tela {
+  font-family: var(--fonte-titulo);
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-align: center;
+}
+
+.subtitulo-tela {
+  font-size: 13px;
+  color: var(--cor-texto-suave);
+  text-align: center;
+  line-height: 1.5;
+  margin-top: 6px;
+}
+
+.introducao-tela {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+/* -----------------------------------------------------
+   7. FORMULÁRIOS
+   Usado em: index (login) e cadastro. O campo de missão
+   da tela de foco também usa ".campo-formulario".
+   ----------------------------------------------------- */
+.cartao-formulario {
+  background: var(--cor-cartao);
+  border: 1px solid var(--cor-borda);
+  border-radius: 18px;
+  padding: 30px;
+  box-shadow: var(--sombra-cartao);
+   margin-top:40px ;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.campo-formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.campo-formulario label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--cor-texto-suave);
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.caixa-entrada {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--cor-borda);
+  border-radius: 10px;
+  padding: 10px 12px;
+  background: transparent;
+}
+
+.caixa-entrada input {
+  border: none;
+  outline: none;
+  background: transparent;
+  color: var(--cor-texto-principal);
+  font-size: 14px;
+  width: 100%;
+}
+
+.caixa-entrada .icone-campo {
+  font-size: 14px;
+}
+
+/* -----------------------------------------------------
+   8. BOTÕES
+   Usado em praticamente todas as páginas.
+   ----------------------------------------------------- */
+.botao-principal {
+  background: var(--gradiente-botao);
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  padding: 13px 18px;
+  border-radius: 12px;
+  box-shadow: var(--sombra-botao);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+}
+
+.botao-secundario {
+  background: transparent;
+  border: 1px solid var(--cor-borda);
+  color: var(--cor-texto-suave);
+  font-size: 13px;
+  font-weight: 600;
+  padding: 11px 18px;
+  border-radius: 12px;
+  width: 100%;
+}
+
+.area-acao-final {
+  margin-top: auto;
+  display: flex;
+  gap: 8px;
+}
+
+.area-acao-final .botao-principal {
+  flex: 1;
+}
+
+/* -----------------------------------------------------
+   9. NAVEGAÇÃO INTERNA (abas: Foco / Missões / Inventário / Progresso)
+   Usado em: foco, missões, inventário e progresso.
+   ----------------------------------------------------- */
+.nav-interna {
+  display: flex;
+  background: var(--cor-cartao);
+  border: 1px solid var(--cor-borda);
+  border-radius: 12px;
+  padding: 4px;
+  gap: 4px;
+}
+
+.nav-interna a {
+  flex: 1;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--cor-texto-suave);
+  padding: 9px 4px;
+  border-radius: 9px;
+}
+
+.nav-interna a.aba-ativa {
+  background: var(--gradiente-botao);
+  color: #ffffff;
+}
+
+/* -----------------------------------------------------
+   10. CARTÃO DE XP / NÍVEL
+   Usado em: foco e progresso.
+   ----------------------------------------------------- */
+.cartao-xp {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--cor-cartao);
+  border: 1px solid var(--cor-borda);
+  border-radius: 14px;
+  padding: 12px 14px;
+  box-shadow: var(--sombra-cartao);
+}
+
+.icone-xp {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: var(--gradiente-botao);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.info-xp {
+  flex: 1;
+}
+
+.info-xp .linha-nivel {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: var(--cor-texto-suave);
+  margin-bottom: 5px;
+}
+
+.barra-progresso {
+  width: 100%;
+  height: 7px;
+  border-radius: 999px;
+  background: var(--cor-borda);
+  overflow: hidden;
+}
+
+.barra-progresso .preenchimento {
+  height: 100%;
+  border-radius: 999px;
+  background: var(--gradiente-botao);
+}
+
+/* -----------------------------------------------------
+   11. MARCADOR DE SELEÇÃO (bolinha redonda)
+   Usado em: personagens (marca o item escolhido) e
+   progresso (ícone de sequência 🔥).
+   ----------------------------------------------------- */
+.marcador-selecao {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 2px solid var(--cor-borda);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  flex-shrink: 0;
+}
+
+/* -----------------------------------------------------
+   12. LISTA EM FORMATO DE CARTÕES
+   Usado em: personagens e missões (a lista de itens).
+   ----------------------------------------------------- */
+.lista-cartoes {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* -----------------------------------------------------
+   13. SUB-ABAS
+   Usado em: missões e inventário.
+   ----------------------------------------------------- */
+.sub-abas {
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+}
+
+.sub-abas button {
+  background: var(--cor-cartao);
+  border: 1px solid var(--cor-borda);
+  color: var(--cor-texto-suave);
+  font-size: 11px;
+  font-weight: 600;
+  padding: 7px 12px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.sub-abas button.sub-aba-ativa {
+  background: var(--cor-roxo);
+  color: #fff;
+  border-color: transparent;
+}
